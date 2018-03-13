@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Qna Maker
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item margin-bottom>
+      <ion-label floating>Mensagem</ion-label>
+      <ion-textarea [(ngModel)]="message"></ion-textarea>
+    </ion-item>
+
+    <button ion-button block margin-bottom (click)="getResposta()">Buscar</button>
+
+  </ion-list>
+
+  <ion-list margin-top *ngIf="resposta.answer">
+
+    <h3 text-center margin-bottom center> Resultado:</h3>
+
+    <ion-item margin-bottom>
+        <ion-label floating>Resposta</ion-label>
+      <ion-textarea type="text" [(ngModel)]="resposta.answer" disabled></ion-textarea>
+    </ion-item>
+
+    
+
+  </ion-list>
+
+
+
+
+</ion-content>
